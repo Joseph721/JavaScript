@@ -63,3 +63,12 @@ var z = " ";
 console.log(z);
 console.log(typeof z);
 
+// let: PARA DECLARAR UNA VARIABLE 
+// const: PARA DECLARAR UNA CONSTANTE
+
+let nombre2;
+nombre2  = "juan";
+console.log(nombre2);
+
+
+const apellido = "Perez";
