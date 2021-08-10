@@ -92,4 +92,4 @@ class Persona {
   let p3 = new Persona("Mario", "Ruiz");
   let p4 = new Persona("Francisco", "Olivas");
   let p5 = new Persona("Luis", "Quintero");
-  console.log(p5.toString());
+  console.log(p5.toString()); //Error. ya no se asignan mas id para este objeto
