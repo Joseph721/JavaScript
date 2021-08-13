@@ -80,7 +80,7 @@ class Orden {
 
      console.log(`-Orden: ${this._idOrden} \n Total: $${this.calcularTotal()} \n Productos: \n ${productosOrden}`);
      
-
+     
   }
 
 }
