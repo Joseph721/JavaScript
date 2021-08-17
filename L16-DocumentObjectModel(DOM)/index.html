@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabe">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos!</p>
+    
+    <script>
+        // getElementById nos regresa todo el objeto 
+        // con innerHTML accedemos al texto del elemento html 
+        let cabecero = document.getElementById("cabe");
+        console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+        cabecero.innerHTML = "Cambio de cabecero";
+
+        let parrafoSaludo = document.getElementById("parrafo");
+        console.log(`Valor párrafo: ${parrafoSaludo.innerHTML}`);
+
+        parrafo.innerHTML = "Nuevo valor del párrafo";
+     
+    </script>
+
+</body>
+</html>
