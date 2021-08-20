@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Formulario con JavaScript</title>
+</head>
+<body>
+    <form id="form">
+        Nombre: <input type="text" name="nombre" value="Francisco" />
+        <br/>
+        Apellido: <input type="text" name="apellido" value="Hernández">
+        <br/>
+    </form>
+    <!-- Esta es la manera en que podemos asignar una función a un evento -->
+    <!-- Se puede programar el metodo onclick para que se mande a llamar una función de JavaScript -->
+    <button onclick="mostrarValor()">Mostrar</button>
+    <div id="valores"></div>
+
+
+    <script>
+        // function mostrarValor(){
+        //     // Con esta linea de codigo se recupera el formulario 
+        //     let formularios = document.forms["form"];
+
+        //     // Ahora se recorren todos los elementos del formulario de la siguiente manera:
+        //     let texto = " ";
+            
+        //     for(let elemento of formularios){
+        //         // Accedemos a los elementos de value del formulario y los vamos concatenando en la variable texto 
+        //         texto += elemento.value + "<br/>";
+        //     }
+        //     document.getElementById("valores").innerHTML = texto;
+        //     // console.log(texto);
+
+        // }
+
+        // Acceder a los elementos del formulario por separado o de manera individual 
+            function mostrarValor(){
+                let formularios = document.forms["form"];
+                let texto = " ";
+                let nombre = formularios["nombre"];
+                let apellido = formularios["apellido"];
+                texto = nombre.value + "<br/>" + apellido.value;
+                document.getElementById("valores").innerHTML = texto;
+            }
+
+
+
+    </script>
+    
+</body>
+</html>

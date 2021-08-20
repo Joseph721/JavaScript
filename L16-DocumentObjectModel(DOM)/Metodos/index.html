@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color: rgb(238, 37, 37);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul">Ejemplo DOM con JavaScript</h1>
+    <p class="azul">Saludos!</p>
+    <p class="azul">Otro párrafo</p>
+    <!-- <p id="parrafo1">Saludos!</p> -->
+    <!-- <p id="parrafo2">Otro párrafo</p> -->
+    
+    <script>
+        // getElementById nos regresa todo el objeto 
+        // con innerHTML accedemos al texto del elemento html 
+
+        // let cabecero = document.getElementById("cabe");
+        // console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+        // let elementosaludo = document.getElementById("parrafo");
+        // console.log(`Valor párrafo: $ elementosaludo.innerHTML}`);
+    
+        // cabecero.innerHTML = "Cambio de cabecero";
+        // parrafo.innerHTML = "Nuevo valor del párrafo";
+
+        // Esta es otra forma para recuperar los elementos:
+        // Por el tipo de elemento HTML que se tiene...
+        // let elementos = document.getElementsByTagName("p");
+        // console.log(`No. Párrafos: $ elementos.length}`);
+        // // No. Párrafos: 2
+        // for(let i=0; i elementos.length; i++){
+        //     console.log(`Indice: ${i} - $ elementos[i].innerHTML}`);
+        //     // Indice: 0 - Saludos!
+        //     // Indice: 1 - Otro párrafo
+        // }
+
+        //Metodo para recuperar todos los elementos HTML que contengan una cierta clase de tipo CSS.
+
+        // let elementos = document.getElementsByClassName("azul");
+        // console.log(`No. Elementos: ${elementos.length}`);
+        //  for(let i=0; i<elementos.length; i++){
+        //     console.log(`Indice: ${i} - ${elementos[i].innerHTML}`);
+        
+        // }
+        // Otra manera de recorrer los elementos forof
+        // for (let elemento of elementos) {
+        //     console.log(`${elemento.innerHTML}`);
+        // }
+
+        // Con querySelectorAll se recuperan las etiquetas que tengan aplicadas
+        // cierta clase como se muestra a continuación: 
+        let elementos = document.querySelectorAll("p.azul");
+        console.log(`No. Elementos: ${elementos.length}`);
+         for(let i=0; i<elementos.length; i++){
+            console.log(`Indice: ${i} - ${elementos[i].innerHTML}`);
+        
+        }
+     
+    </script>
+
+</body>
+</html>
